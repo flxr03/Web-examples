@@ -9,18 +9,18 @@ function eKeyHandler(event) {
 
 	if (pattern.indexOf(event.key) < 0 || event.key !== pattern[nowKey]) {
 		nowKey = 0;
-		$('#secret').empty();
+		$('#secretCode').empty();
 		is_done = false;
 		return;
 	}
 
 	nowKey++;
-	$('#secret').append(pattern[nowKey-1]+' ');
+	$('#secretCode').append('<kbd>'+pattern[nowKey-1]+'</kbd>'+' ');
 	if (pattern.length === nowKey) {
 		nowKey = 0;
 		setTimeout(() => {
-			$('#secret').empty();
-			$('#secret').append('Good job!');
+			$('#secretCode').empty();
+			$('#secretCode').append('<p>Good job!</p>');
 		}, 1000);
 		is_done = true;
 	}
