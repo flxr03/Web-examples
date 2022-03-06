@@ -1,2 +1,2 @@
 # Web-examples
-Web example file by flxr
+Web example files by flxr
